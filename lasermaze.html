@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laser Maze</title>
+</head>
+<script>
+    function submit(){
+        if (document.getElementById("answer").innerText=="1,6,8,12,15,21,24,29,31,36"){
+            document.getElementById("answer").innerText="correct, https://docs.google.com/document/d/17t9cjiAJCiYmO3pL2HoxL4mOZwIqkH2lQ0EyAlnOEOg/edit?tab=t.0#heading=h.hzyyw253q6zg"
+        }else{
+            document.getElementById("answer").innerText="wrong"
+        }
+    }
+</script>
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f0f0f0;
+    }
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(6, 40px);
+        gap: 8px;
+    }
+    .grid button {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+</style>
+<body>
+    <div class="grid">
+        <button>you</button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+    </div>
+    <div class="grid" id="field">
+        <button id="1">_</button><button id="2">_</button><button id="3">_</button><button id="4">_</button><button id="5">_</button><button id="6">_</button>
+        <button id="7">_</button><button id="8">_</button><button id="9">_</button><button id="10">_</button><button id="11">_</button><button id="12">_</button>
+        <button id="13">_</button><button id="14">_</button><button id="15">_</button><button id="16">_</button><button id="17">_</button><button id="18">_</button>
+        <button id="19">_</button><button id="20">_</button><button id="21">_</button><button id="22">_</button><button id="23">_</button><button id="24">_</button>
+        <button id="25">_</button><button id="26">_</button><button id="27">_</button><button id="28">_</button><button id="29">_</button><button id="30">_</button>
+        <button id="31">_</button><button id="32">_</button><button id="33">_</button><button id="34">_</button><button id="35">_</button><button id="36">_</button>
+    </div>
+    <div class="grid">
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button>end</button>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <button id="answer" contenteditable="true" style="width: 200px; height: 40px; background-color: white;">Answer here</button>
+    <button onclick="submit()">Submit</button>
+</body>
+</html>
